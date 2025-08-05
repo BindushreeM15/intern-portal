@@ -58,11 +58,5 @@ app.put("/api/user", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Mock backend running at http://localhost:${PORT}`);
 });
-const path = require('path');
 
-app.use(express.static(path.join(__dirname, '../frontend')));
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/index.html'));
-});
 
