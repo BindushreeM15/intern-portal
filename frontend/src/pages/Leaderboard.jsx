@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./Leaderboard.css"; // We'll define styles here
+import "./Leaderboard.css"; 
 
 const leaderboardData = [
   { name: "👑 Ananya Sharma", amount: 8000 },

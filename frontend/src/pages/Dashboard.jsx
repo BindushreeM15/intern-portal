@@ -1,4 +1,3 @@
-// src/pages/Dashboard.jsx
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Dashboard.css";
@@ -8,7 +7,6 @@ const Dashboard = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    // Fetch user data from backend
     fetch("http://localhost:5000/api/user")
       .then((res) => res.json())
       .then((data) => setUser(data))

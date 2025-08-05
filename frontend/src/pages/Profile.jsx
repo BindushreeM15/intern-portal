@@ -9,7 +9,6 @@ const Profile = () => {
   const [copied, setCopied] = useState(false);
   const [form, setForm] = useState({ name: '', email: '' });
 
-  // Fetch user data from backend on mount
   useEffect(() => {
     fetch('http://localhost:5000/api/user')
       .then(res => res.json())

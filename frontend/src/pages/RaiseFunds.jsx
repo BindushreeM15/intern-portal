@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "../Dashboard.css"; // use existing CSS styles
+import "../Dashboard.css"; 
 
 const RaiseFunds = () => {
   const navigate = useNavigate();
@@ -41,7 +41,6 @@ const RaiseFunds = () => {
 
   return (
     <div className="page-container">
-      {/* Left Section */}
       <div className="left-content">
         <h2>💰 Raise Funds</h2>
         <p><strong>Referral Link:</strong></p>
@@ -102,7 +101,6 @@ const RaiseFunds = () => {
 
       </div>
 
-      {/* Right Section */}
       <div className="right-content">
         <img
           src="https://cdni.iconscout.com/illustration/premium/thumb/investment-saving-fund-5380343-4511091.png?f=webp"

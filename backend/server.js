@@ -6,9 +6,8 @@ const app = express();
 const PORT = 5000;
 
 app.use(cors());
-app.use(bodyParser.json()); // To parse JSON bodies
+app.use(bodyParser.json()); 
 
-// Dummy user data
 let userData = {
   name: "Bindushree",
   email: "bindu@example.com",
@@ -16,12 +15,10 @@ let userData = {
   amountRaised: 1500
 };
 
-// GET existing user
 app.get("/api/user", (req, res) => {
   res.json(userData);
 });
 
-// POST signup (mock saving new user)
 app.post("/api/signup", (req, res) => {
   const { name, email } = req.body;
   userData = {
@@ -33,7 +30,6 @@ app.post("/api/signup", (req, res) => {
   res.status(201).json(userData);
 });
 
-// ✅ Add this: Mock login
 app.post("/api/login", (req, res) => {
   const { email } = req.body;
   if (email === userData.email) {
@@ -43,7 +39,6 @@ app.post("/api/login", (req, res) => {
   }
 });
 
-// ✅ Add this: Update user profile
 app.put("/api/user", (req, res) => {
   const { name, email, amountRaised } = req.body;
 

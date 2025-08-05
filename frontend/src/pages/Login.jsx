@@ -9,7 +9,7 @@ export default function Login() {
   const handleLogin = () => {
     const user = JSON.parse(localStorage.getItem('user'));
     if (user?.email === email) {
-    navigate('/dashboard', { state: { name: user.name } }); // 👈 Pass userId here
+    navigate('/dashboard', { state: { name: user.name } });
     } else {
       alert('User not found! Please sign up first.');
     }

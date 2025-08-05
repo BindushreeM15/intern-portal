@@ -21,8 +21,7 @@ const handleSignup = async () => {
       throw new Error("Signup failed");
     }
 
-    const userData = await response.json(); // ✅ This will contain name, email, referralCode, amountRaised
-
+    const userData = await response.json(); 
     localStorage.setItem("user", JSON.stringify(userData));
     navigate("/dashboard");
   } catch (error) {
